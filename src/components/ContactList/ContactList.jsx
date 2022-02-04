@@ -13,7 +13,7 @@ const ContactList = () => {
   return (
     <ul>
       {items.map(({ id, name, number }) => (
-        <li className={s.contactItem}>
+        <li key={id} className={s.contactItem}>
           <span>{name}:</span>
           <span>{number}</span>
           <button

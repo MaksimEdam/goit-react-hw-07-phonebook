@@ -3,13 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import * as operations from '../../redux/contacts-operations';
-import { getItems } from '../../redux/contacts-selectors';
+import { getContacts } from '../../redux/contacts-selectors';
 import s from './FormContact.module.css';
 
 function FormContact() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  const items = useSelector(getItems);
+  const items = useSelector(getContacts);
   const dispatch = useDispatch();
 
   const handleChange = ({ target: { name, value } }) => {
